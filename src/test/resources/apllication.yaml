@@ -1,0 +1,34 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+      schema: classpath:org/springframework/session/jdbc/schema-mysql.sql
+
+#Test OAuth
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: "test"
+            client-secret: "test"
+            scope:
+              - profile
+              - email
+
+server:
+  servlet:
+    encoding:
+      force: true

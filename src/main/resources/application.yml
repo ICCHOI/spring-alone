@@ -1,0 +1,31 @@
+spring:
+  h2:
+   console:
+      enabled: true
+      path: /h2-console
+
+  datasource:
+    url: jdbc:h2:~/alone;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+      schema: classpath:org/springframework/session/jdbc/schema-mysql.sql
+
+  profiles:
+    include: oauth
+
+server:
+  servlet:
+    encoding:
+      force: true
