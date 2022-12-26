@@ -20,6 +20,11 @@ spring:
       initialize-schema: always
       schema: classpath:org/springframework/session/jdbc/schema-mysql.sql
 
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
 #Test OAuth
   security:
     oauth2:
