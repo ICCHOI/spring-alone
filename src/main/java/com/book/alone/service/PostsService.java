@@ -1,7 +1,5 @@
 package com.book.alone.service;
 
-import static java.util.stream.Collectors.*;
-
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -42,6 +40,7 @@ public class PostsService {
 		Posts entity = postRepository.findById(id)
 			.orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id));
 
+
 		return new PostsResponse(entity);
 	}
 
@@ -49,7 +48,7 @@ public class PostsService {
 	public List<PostsListResponse> findAllDesc() {
 		return postRepository.findAllDesc().stream()
 			.map(PostsListResponse::new)
-			.collect(toList());
+			.toList();
 	}
 
 	@Transactional
