@@ -36,6 +36,12 @@ spring:
             scope:
               - profile
               - email
+          naver:
+            client-id: "test"
+            client-secret: "test"
+            scope:
+              - profile
+              - email
 
 server:
   servlet:
