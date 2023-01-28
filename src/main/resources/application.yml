@@ -25,6 +25,9 @@ spring:
   profiles:
     include: oauth
 
+  pid:
+    file: /home/ec2-user/app/step2/spring-alone.pid
+
 server:
   servlet:
     encoding:
