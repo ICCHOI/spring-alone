@@ -22,9 +22,8 @@ spring:
       initialize-schema: always
       schema: classpath:org/springframework/session/jdbc/schema-mysql.sql
 
-  config:
-    activate:
-      on-profile: oauth
+  profiles:
+    include: oauth
 
 server:
   servlet:
