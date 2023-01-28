@@ -38,7 +38,7 @@ fi
 echo "> 새 어플리케이션 배포"
 
 # shellcheck disable=SC2012
-JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
+JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 2)
 
 echo "> JAR Name: $JAR_NAME"
 
@@ -48,6 +48,6 @@ chmod +x $JAR_NAME
 
 echo "> $JAR_NAME 실행"
 
-nohup java -jar $REPOSITORY/$JAR_NAME 2>&1 &
+nohup java -jar $JAR_NAME 2>&1 &
 
 
