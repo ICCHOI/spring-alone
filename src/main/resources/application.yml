@@ -15,6 +15,7 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.MariaDBDialect
 
   data:
     redis:
@@ -22,7 +23,6 @@ spring:
       port: 6379
 
   session:
-    store-type: jdbc
     jdbc:
       initialize-schema: always
       schema: classpath:org/springframework/session/jdbc/schema-mysql.sql

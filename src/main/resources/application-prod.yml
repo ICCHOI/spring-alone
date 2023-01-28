@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    include: oauth, prod-db
+
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
