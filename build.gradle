@@ -38,6 +38,10 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+tasks.named('jar') {
+    enabled = false
+}
+
 /* gradlew test 관련 로깅 설정
 test{
     testLogging{
