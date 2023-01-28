@@ -17,18 +17,14 @@ spring:
       ddl-auto: create-drop
     database-platform: org.hibernate.dialect.MariaDBDialect
 
-  data:
-    redis:
-      host: localhost
-      port: 6379
-
   session:
     jdbc:
       initialize-schema: always
       schema: classpath:org/springframework/session/jdbc/schema-mysql.sql
 
-  profiles:
-    include: oauth
+  config:
+    activate:
+      on-profile: oauth
 
 server:
   servlet:
