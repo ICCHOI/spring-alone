@@ -38,6 +38,7 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+/* gradlew test 관련 로깅 설정
 test{
     testLogging{
         showStandardStreams = true
@@ -47,3 +48,4 @@ test{
         exceptionFormat = 'full'
     }
 }
+ */
